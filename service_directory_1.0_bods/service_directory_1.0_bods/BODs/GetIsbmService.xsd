@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:oa="http://www.openapplications.org/oagis/9"
+	xmlns:sd="https://www.openoandm.org/service-directory"
+	targetNamespace="https://www.openoandm.org/service-directory"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	version="1.0">
+
+	<xs:import schemaLocation="../OAGIS/Meta.xsd" namespace="http://www.openapplications.org/oagis/9"/>
+	<xs:include schemaLocation="../Nouns/IsbmService.xsd"/>
+
+	<xs:element name="GetIsbmService">
+		<xs:annotation>
+			<xs:documentation>Used to request retrieval of a ws-ISBM service configuration.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="oa:BusinessObjectDocumentType">
+					<xs:sequence>
+						<xs:element name="DataArea" type="sd:GetIsbmServiceDataArea"/>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="GetIsbmServiceDataArea">
+		<xs:sequence>
+			<xs:element ref="oa:Get"/>
+			<xs:element ref="sd:IsbmService" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

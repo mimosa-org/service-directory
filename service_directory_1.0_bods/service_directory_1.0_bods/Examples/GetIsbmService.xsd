@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sd:GetIsbmService xmlns:oa="http://www.openapplications.org/oagis/9"
+	xmlns:sd="https://www.openandm.org/service-directory"
+	releaseID="1.0">
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:LogicalID>cc555257-b7ed-434d-b216-2f7fb2b3b870</oa:LogicalID>
+		</oa:Sender>
+		<oa:CreationDateTime>2014-07-01T10:00:00Z</oa:CreationDateTime>
+		<oa:BODID>aaf29423-bc83-4680-962c-ddf1bb313ba7</oa:BODID>
+	</oa:ApplicationArea>
+	<sd:DataArea>
+		<oa:Get>
+			<oa:Expression />
+		</oa:Get>
+		<sd:IsbmService>
+			<sd:System>cc555257-b7ed-434d-b216-2f7fb2b3b870</sd:System>
+			<sd:Channel>/Enterprise/Site/Area/Center</sd:Channel>
+			<sd:Topic>OIIE:S10:V1.1/CCOM-XML:ProcessAssetSegmentEvents:V1.0</sd:Topic>
+		</sd:IsbmService>
+	</sd:DataArea>
+</sd:GetIsbmService>

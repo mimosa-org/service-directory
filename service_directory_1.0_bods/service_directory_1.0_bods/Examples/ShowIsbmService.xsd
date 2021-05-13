@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sd:ShowIsbmService xmlns:oa="http://www.openapplications.org/oagis/9"
+	xmlns:sd="https://www.openandm.org/service-directory"
+	releaseID="1.0">
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:LogicalID>977c4b70-7080-48be-a500-8beb6bc2057f</oa:LogicalID>
+		</oa:Sender>
+		<oa:CreationDateTime>2014-07-01T10:00:10Z</oa:CreationDateTime>
+		<oa:BODID>64270c90-73b2-4a28-ae95-720c2d329933</oa:BODID>
+	</oa:ApplicationArea>
+	<sd:DataArea>
+		<oa:Show />
+		<sd:IsbmService>
+			<sd:Id>459d71e2-5050-4af6-b81b-35f7c05790d2</sd:Id>
+			<sd:System>cc555257-b7ed-434d-b216-2f7fb2b3b870</sd:System>
+			<sd:EndpointType>ProviderPublication</sd:EndpointType>
+			<sd:Endpoint>http://example.com/ProviderPublicationService</sd:Endpoint>
+			<sd:Channel>/Enterprise/Site/Area/Center</sd:Channel>
+			<sd:Topic>OIIE:SC10:V1.0/CCOM:SyncAssetInstall:V1.0</sd:Topic>
+			<sd:Token>
+				<wsse:UsernameToken xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+					<wsse:Username>PwWcKn33</wsse:Username>
+					<wsse:Password>TzW3V$qgCSZm%pdL</wsse:Password>
+				</wsse:UsernameToken>
+			</sd:Token>
+			<sd:Valid>
+				<sd:To>2014-09-08T00:00:00Z</sd:To>
+			</sd:Valid>
+			<sd:Status>Active</sd:Status>
+		</sd:IsbmService>
+	</sd:DataArea>
+</sd:ShowIsbmService>

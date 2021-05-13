@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:sd="https://www.openandm.org/service-directory"
+	targetNamespace="https://www.openandm.org/service-directory"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	version="1.0">
+
+	<xs:element name="IsbmService">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="System" type="xs:string"/>
+				<xs:element name="EndpointType" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="ProviderPublication"/>
+							<xs:enumeration value="ConsumerPublication"/>
+							<xs:enumeration value="ProviderRequest"/>
+							<xs:enumeration value="ConsumerRequest"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Endpoint" type="xs:string" minOccurs="0"/>
+				<xs:element name="Channel" type="xs:string" minOccurs="0"/>
+				<xs:element name="Topic" type="xs:string" minOccurs="0"/>
+				<xs:element name="Token" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:any namespace="##any" processContents="lax"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Valid" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="From" type="xs:date" minOccurs="0"/>
+							<xs:element name="To" type="xs:date" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Status" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
